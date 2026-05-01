@@ -1135,7 +1135,7 @@ public class BinSearch {
         "Corporate charts can have many children per node, while binary trees are limited to two.",
       code: "",
       answer: "B",
-      image: "binaryTree.png",
+      image: "binaryTree",
     },
     {
       id: 35,
@@ -1147,7 +1147,7 @@ public class BinSearch {
       explanation: "In-order: Left, Root, Right.",
       code: "",
       answer: "C",
-      image: "inorderTraversal.png",
+      image: "inorderTraversal",
     },
     {
       id: 36,
@@ -1159,7 +1159,7 @@ public class BinSearch {
       explanation: "Nodes at level k = 2^k. 2^5 = 32.",
       code: "",
       answer: "B",
-      image: "maximumNodes.png",
+      image: "maximumNodes",
     },
     {
       id: 37,
@@ -1341,7 +1341,7 @@ public class BinSearch {
         "In a min-heap array implementation, the root (minimum element) is always at index 0. The array is not fully sorted (only heap-ordered), and dynamic resizing may still be needed if the heap grows beyond current capacity.",
       code: "",
       answer: "B",
-      image: "heap.png",
+      image: "heap",
     },
     {
       id: 76,
@@ -1354,7 +1354,7 @@ public class BinSearch {
         "In array-based heap representation with root at index 0, the left child is at index 2i+1 and the right child is at 2i+2. This arithmetic mapping eliminates the need for explicit pointers.",
       code: "",
       answer: "C",
-      image: "heap.png",
+      image: "heap",
     },
     {
       id: 78,
@@ -1372,7 +1372,7 @@ public class BinSearch {
         "Heaps must satisfy two properties: (1) the heap-order property (parent ≤ children for a min-heap), and (2) the structural property (complete binary tree with all levels filled left-to-right). Tree A violates heap-order: node (38,D) has a left child (35,C) where 35 < 38, meaning the parent is larger than its child. Tree C violates the structural property: it is not a complete binary tree because node (55,T) has no children while nodes to its right (like 44,B) do have children, creating a gap in the last level. Trees B and D are valid min-heaps that satisfy both properties.",
       code: "",
       answer: "B",
-      image: "heapmcq.png",
+      image: "heapmcq",
     },
     {
       id: 81,
@@ -1385,7 +1385,7 @@ public class BinSearch {
         "After removing the minimum element from a min-heap, the heap is restructured through down-heap bubbling (percolate down) to maintain the heap-order property. The new root will be the next smallest element in the heap.",
       code: "",
       answer: "C",
-      image: "priorityheap.png",
+      image: "priorityheap",
     },
     {
       id: 84,
@@ -1610,7 +1610,7 @@ public class BinSearch {
         "Using only the last four digits of SSN as a hash function maps all SSNs with the same last four digits to the same bucket, causing frequent collisions. The implementation must handle collisions using chaining or open addressing.",
       code: "",
       answer: "B",
-      image: "hash.png",
+      image: "hash",
     },
     {
       id: 66,
@@ -2005,7 +2005,7 @@ public class TestSongMap {
         "Tree C places a larger value in a left subtree, violating BST rules.",
       code: "",
       answer: "C",
-      image: binarySearchTrees,
+      image: "binarySearchTrees",
     },
     {
       id: 54,
@@ -2017,7 +2017,7 @@ public class TestSongMap {
       explanation: "Worst case is the depth of the tree, which is 6.",
       code: "",
       answer: "C",
-      image: "bstMaxTraversal.png",
+      image: "bstMaxTraversal",
     },
     {
       id: 55,
@@ -2034,7 +2034,7 @@ public class TestSongMap {
       explanation: "Following BST logic, 77 falls to the left of 80.",
       code: "",
       answer: "A",
-      image: "bstMaxTraversal.png",
+      image: "bstMaxTraversal",
     },
     {
       id: 56,
@@ -2718,7 +2718,7 @@ public static void insertionSort(char[] data) {
         "In Huffman encoding, each character is assigned a binary code based on its path from the root (left = 0, right = 1). Locate each character (b, a, r) in the tree and trace the path from root to leaf to derive each code, then concatenate them.",
       code: "",
       answer: "B",
-      image: "huffman.png",
+      image: "huffman",
     },
     {
       id: 148,
@@ -2785,7 +2785,7 @@ public static void insertionSort(char[] data) {
         "A complete balanced binary tree minimizes the height to O(log n), giving the best worst-case search time. Degenerate trees degrade to O(n) for search, equivalent to a linked list.",
       code: "",
       answer: "A",
-      image: "nodesupport.png",
+      image: "nodesupport",
     },
     {
       id: 153,
@@ -2798,7 +2798,7 @@ public static void insertionSort(char[] data) {
         "When inserting into a Red-Black Tree, the new node is initially colored red. If a double-red violation occurs, resolve it by recoloring or restructuring based on the uncle's color, then verify all Red-Black properties are maintained.",
       code: "",
       answer: "C",
-      image: "rbt.png",
+      image: "rbt",
     },
     {
       id: 159,
