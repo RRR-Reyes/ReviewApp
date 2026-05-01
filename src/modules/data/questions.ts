@@ -12,6 +12,13 @@ import {
   searchtree,
   rbt,
   nodesupport,
+  DijkstraActivity, 
+  DijkstraExample, 
+  graphexample, 
+  BSTDeleteCase3, 
+  amortizedanalysis, 
+  Trie, 
+  huffmancab,
 } from "./imageData";
 
 export interface Question {
@@ -811,6 +818,24 @@ public class BinSearch {
       code: "",
       answer: "B",
       image: "",
+    },
+    {
+      id: 160,
+      topic: "Chapter 4: Algorithm Analysis",
+      title: "Amortized ArrayList Growth",
+      question:
+        "An ArrayList doubles its capacity when full. Why is the average cost per insertion O(1) despite occasional expensive resizes?",
+      options: [
+        "A. Resizes happen in constant time",
+        "B. Resize costs are spread across many cheap insertions",
+        "C. The array never actually needs resizing",
+        "D. Java pre-allocates infinite memory",
+      ],
+      explanation:
+        "Amortized analysis shows that expensive O(n) resizes occur rarely (only at powers of 2). The cost is spread over O(n) cheap O(1) insertions, yielding O(1) average per operation.",
+      code: "",
+      answer: "B",
+      image: "amortizedanalysis",
     },
   ],
   "Chapter 5: Recursion": [
@@ -2341,7 +2366,7 @@ public class TestSongMap {
       options: [
         "A. 55 21 89 5 3 34 13 8",
         "B. 5 21 55 89 3 8 13 34",
-        "C. 5 21 55 89 3 8 13 34",
+        "C. 5 12 55 89 3 8 31 34",
         "D. 3 5 21 55 88 13 34 89",
       ],
       explanation:
@@ -2714,6 +2739,42 @@ public static void insertionSort(char[] data) {
       image: "",
     },
     {
+      id: 161,
+      topic: "Chapter 13: Text Processing",
+      title: "Trie Prefix Prediction",
+      question:
+        "Why are tries ideal for autocomplete compared to hash tables?",
+      options: [
+        "A. Tries store characters in sorted order",
+        "B. Tries allow O(L) prefix search where L is prefix length, independent of dictionary size",
+        "C. Tries use less memory than hash tables",
+        "D. Tries support duplicate keys",
+      ],
+      explanation:
+        "Tries physically map prefix relationships. Searching for a prefix of length L takes O(L) time — same whether the dictionary has 100 or 100 million words. Hash tables cannot efficiently enumerate keys with a given prefix.",
+      code: "",
+      answer: "B",
+      image: "Trie",
+    },
+    {
+      id: 164,
+      topic: "Chapter 13: Text Processing",
+      title: "Huffman Decoding",
+      question:
+        "Using the Huffman tree where a=0, b=10, c=110, d=111, decode 110010.",
+      options: [
+        "A. ad",
+        "B. cab",
+        "C. ac",
+        "D. bd",
+      ],
+      explanation:
+        "Trace the tree: 110=c, 0=a, 10=b. Result: 'cab'. Each code is prefix-free, so decoding is unambiguous.",
+      code: "",
+      answer: "B",
+      image: "huffmancab",
+    },
+    {
       id: 152,
       topic: "Chapter 11: Search Trees",
       title: "BST Structure for Efficient Search",
@@ -2738,6 +2799,136 @@ public static void insertionSort(char[] data) {
       code: "",
       answer: "C",
       image: rbt,
+    },
+    {
+      id: 159,
+      topic: "Chapter 11: Search Trees",
+      title: "BST Deletion Two Children",
+      question:
+        "Deleting node 88 with two internal children from a BST. What is the correct replacement strategy?",
+      options: [
+        "A. Replace with the minimum from the right subtree",
+        "B. Replace with the maximum from the left subtree (predecessor)",
+        "C. Delete both children and reconnect",
+        "D. Replace with the root of the tree",
+      ],
+      explanation:
+        "For Case 3 (two children), find the predecessor — the maximum key in the left subtree. Move it to the deleted node's position, then promote its subtree. This maintains BST ordering.",
+      code: "",
+      answer: "B",
+      image: "BSTDeleteCase3",
+    },
+    {
+      id: 163,
+      topic: "Chapter 11: Search Trees",
+      title: "AVL vs Red-Black",
+      question:
+        "Why might AVL trees be preferred over Red-Black trees in read-heavy applications?",
+      options: [
+        "A. AVL trees have faster insertions and deletions",
+        "B. AVL trees enforce stricter balance, keeping height closer to log₂(n)",
+        "C. AVL trees use less memory",
+        "D. AVL trees allow duplicate keys",
+      ],
+      explanation:
+        "AVL trees maintain balance factor ≤ 1, resulting in height ~1.44 log n vs Red-Black's ~2 log n. Fewer node traversals per search make AVL faster for lookups, though more rotations are needed for updates.",
+      code: "",
+      answer: "B",
+      image: "",
+    },
+  ],
+  "Chapter 14: Graph Algorithms": [
+    {
+      id: 155,
+      topic: "Chapter 14: Graph Algorithms",
+      title: "Dijkstra's Algorithm Priority Queue",
+      question:
+        "In Dijkstra's algorithm, all vertices are initially added to the priority queue. The source s has distance 0, and all others start at infinity. What happens during each pass?",
+      options: [
+        "A. The vertex with maximum distance is removed and finalized",
+        "B. The vertex with minimum distance estimate is removed and considered final",
+        "C. All vertices adjacent to the source are processed simultaneously",
+        "D. The queue is emptied and refilled with updated estimates",
+      ],
+      explanation:
+        "Dijkstra's algorithm always extracts the vertex with the smallest distance label from the priority queue. This vertex is then considered 'finalized' — its shortest path from the source is now known.",
+      code: "",
+      answer: "B",
+      image: "DijkstraActivity",
+    },
+    {
+      id: 156,
+      topic: "Chapter 14: Graph Algorithms",
+      title: "Dijkstra's Relaxation Step",
+      question:
+        "When a vertex u is finalized in Dijkstra's algorithm, outgoing edges are checked to improve distance estimates. What condition triggers an update to vertex v's estimate?",
+      options: [
+        "A. D[u] + w(u,v) > D[v]",
+        "B. D[u] + w(u,v) < D[v]",
+        "C. D[u] < D[v]",
+        "D. w(u,v) < D[v]",
+      ],
+      explanation:
+        "The relaxation step updates D[v] only if the path through u is shorter: D[u] + w(u,v) < D[v]. This is the core comparison that finds shorter paths.",
+      code: "",
+      answer: "B",
+      image: "DijkstraExample",
+    },
+    {
+      id: 157,
+      topic: "Chapter 14: Graph Algorithms",
+      title: "Dijkstra's Termination",
+      question:
+        "Dijkstra's algorithm ends when the last vertex is removed from the priority queue. In the example graph, why did v's estimate not improve when t was finalized?",
+      options: [
+        "A. v was already finalized before t",
+        "B. The edge from t to v had weight greater than v's current estimate",
+        "C. The graph was disconnected",
+        "D. Dijkstra's algorithm does not process edges from t",
+      ],
+      explanation:
+        "When t is finalized, the algorithm checks if D[t] + w(t,v) < D[v]. Since v already had a shorter path (through u), no update occurred. The existing path s→u→v was shorter than any path through t.",
+      code: "",
+      answer: "B",
+      image: "DijkstraExample",
+    },
+    {
+      id: 158,
+      topic: "Chapter 14: Graph Algorithms",
+      title: "Graph Representations",
+      question:
+        "A flight network has 500 airports and 2,000 routes. Which representation is most space-efficient while allowing O(1) edge lookup?",
+      options: [
+        "A. Edge list",
+        "B. Adjacency matrix (500×500)",
+        "C. Adjacency map (hash map of hash maps)",
+        "D. Adjacency list with linked lists",
+      ],
+      explanation:
+        "An adjacency map uses O(E) space (2,000 entries) and provides O(1) average-case lookup via hashing. An adjacency matrix wastes space with 250,000 cells for only 2,000 edges.",
+      code: "",
+      answer: "C",
+      image: "graphexample",
+    },
+  ],
+  "Chapter 15: Memory Management and B-Trees": [
+    {
+      id: 162,
+      topic: "Chapter 15: Memory Management and B-Trees",
+      title: "B-Tree Purpose",
+      question:
+        "What is the primary advantage of B-Trees for database indexing?",
+      options: [
+        "A. They guarantee O(1) insertion",
+        "B. They minimize disk I/O by matching node size to disk blocks",
+        "C. They use less memory than binary search trees",
+        "D. They automatically sort data on insertion",
+      ],
+      explanation:
+        "B-Trees store many keys per node, sized to match disk blocks (e.g., 4KB). This reduces the number of expensive disk reads/writes needed to find a key.",
+      code: "",
+      answer: "B",
+      image: "",
     },
   ],
 };

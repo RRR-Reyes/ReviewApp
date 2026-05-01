@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { questionsByChapter } from "./questions";
+import * as images from "./imageData";
 
 export interface Question {
   id: number;
@@ -318,7 +319,7 @@ export default function DataPage() {
 
               {currentQuestion.image && (
                 <img
-                  src={currentQuestion.image}
+                  src={images[currentQuestion.image as keyof typeof images]}
                   alt="Visual"
                   style={{
                     marginTop: "15px",

@@ -3,8 +3,8 @@ import {
   archModule1Questions,
   archModule2Questions,
   archModule3Questions,
-  // archModule4Questions,
-  // archModule5Questions,
+  archModule4Questions,
+  archModule5Questions,
 } from "./questions";
 
 export default function SystemArchitecturePage() {
@@ -29,6 +29,10 @@ export default function SystemArchitecturePage() {
       return archModule2Questions;
     if (activeModule === "Module 3: MIPS Instructions")
       return archModule3Questions;
+    if (activeModule === "Module 4: MIPS Program Simulation")
+      return archModule4Questions;
+    if (activeModule === "Module 5: C to Assembly & Memory")
+      return archModule5Questions;
     return archModule1Questions;
   }, [activeModule]);
 
@@ -222,8 +226,8 @@ export default function SystemArchitecturePage() {
               { name: "Module 1: Number Systems", emoji: "🔢" },
               { name: "Module 2: Data Representation", emoji: "💾" },
               { name: "Module 3: MIPS Instructions", emoji: "💻" },
-              //{ name: "Module 4: MIPS Program Simulation", emoji: "🔄" }, // ← ADD
-              //{ name: "Module 5: C to Assembly & Memory", emoji: "🧠" }, // ← ADD
+              { name: "Module 4: MIPS Program Simulation", emoji: "🔄" }, // ← ADD
+              { name: "Module 5: C to Assembly & Memory", emoji: "🧠" }, // ← ADD
             ].map((mod) => (
               <button
                 key={mod.name}

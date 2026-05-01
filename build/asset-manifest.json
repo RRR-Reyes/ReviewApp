@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ReviewApp/static/css/main.4bc3a5b3.css",
+    "main.js": "/ReviewApp/static/js/main.73f774d7.js",
+    "static/media/nunito-latin-ext-400-normal.woff": "/ReviewApp/static/media/nunito-latin-ext-400-normal.9e3f8b3c52665eca6dd4.woff",
+    "static/media/nunito-latin-400-normal.woff": "/ReviewApp/static/media/nunito-latin-400-normal.b342b7eec6f6c9d25026.woff",
+    "static/media/nunito-latin-400-normal.woff2": "/ReviewApp/static/media/nunito-latin-400-normal.1426bd429b6b372852b9.woff2",
+    "static/media/nunito-latin-ext-400-normal.woff2": "/ReviewApp/static/media/nunito-latin-ext-400-normal.a8317bb99a23bda842eb.woff2",
+    "static/media/nunito-cyrillic-ext-400-normal.woff": "/ReviewApp/static/media/nunito-cyrillic-ext-400-normal.04d527e6665109dacbcd.woff",
+    "static/media/nunito-cyrillic-ext-400-normal.woff2": "/ReviewApp/static/media/nunito-cyrillic-ext-400-normal.c125166031cc7e287051.woff2",
+    "static/media/nunito-cyrillic-400-normal.woff": "/ReviewApp/static/media/nunito-cyrillic-400-normal.9b2417f28420ca708ecf.woff",
+    "static/media/nunito-cyrillic-400-normal.woff2": "/ReviewApp/static/media/nunito-cyrillic-400-normal.e409d1f91166f2565ec9.woff2",
+    "static/media/nunito-vietnamese-400-normal.woff": "/ReviewApp/static/media/nunito-vietnamese-400-normal.405d9085ab166a8275fd.woff",
+    "static/media/nunito-vietnamese-400-normal.woff2": "/ReviewApp/static/media/nunito-vietnamese-400-normal.213c0aece007d7a8fbc0.woff2",
+    "index.html": "/ReviewApp/index.html",
+    "main.4bc3a5b3.css.map": "/ReviewApp/static/css/main.4bc3a5b3.css.map",
+    "main.73f774d7.js.map": "/ReviewApp/static/js/main.73f774d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4bc3a5b3.css",
+    "static/js/main.73f774d7.js"
+  ]
+}

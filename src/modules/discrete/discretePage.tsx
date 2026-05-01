@@ -4,6 +4,8 @@ import {
   module2Questions,
   module3Questions,
   module4Questions,
+  module5Questions,
+  module6Questions
 } from "./questions";
 
 export default function DiscretePage() {
@@ -28,7 +30,10 @@ export default function DiscretePage() {
       return module1Questions;
     if (activeModule === "Module 2: Set Theory") return module2Questions;
     if (activeModule === "Module 3: Functions") return module3Questions;
-    return module4Questions;
+    if (activeModule === "Module 4: Cryptography") return module4Questions;
+    if (activeModule === "Module 5: Stochastic Computing") return module5Questions;
+    if (activeModule === "Module 6: Sequences and Graph Theory") return module6Questions;
+    return module1Questions;
   }, [activeModule]);
 
   const topics = useMemo(
@@ -226,6 +231,8 @@ export default function DiscretePage() {
               { name: "Module 2: Set Theory", emoji: "📊" },
               { name: "Module 3: Functions", emoji: "📈" },
               { name: "Module 4: Cryptography", emoji: "🔐" },
+              { name: "Module 5: Stochastic Computing", emoji: "🎲" },
+              { name: "Module 6: Sequences and Graph Theory", emoji: "📊" },
             ].map((mod) => (
               <button
                 key={mod.name}
