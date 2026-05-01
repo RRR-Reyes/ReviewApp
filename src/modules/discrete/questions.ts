@@ -2872,7 +2872,7 @@ export const module6Questions: Question[] = [
       const matrixStr = [header, ...rows].join("\n");
  
       return {
-        prompt: `The adjacency matrix of a graph is:\n${matrixStr}\nFind its degree sequence.\nYour answer is a list of integers (no space) such as        1,2,5,3`,
+        prompt: `The adjacency matrix of a graph is:\n${matrixStr}\nFind its degree sequence.\nYour answer is a list of integers (no space) such as        1,2,3,5`,
         answer: sorted,
       };
     },
@@ -2915,7 +2915,7 @@ export const module6Questions: Question[] = [
         .join(",");
  
       return {
-        prompt: `The adjacency list of a graph is:\n${adjList.join("\n")}\nFind its degree sequence.\n\nAnswer is a sequence of integers separated by commas, no brackets. Example:\n1,2,5,3`,
+        prompt: `The adjacency list of a graph is:\n${adjList.join("\n")}\nFind its degree sequence.\n\nAnswer is a sequence of integers separated by commas, no brackets. Example:\n1,2,3,5`,
         answer: sorted,
       };
     },

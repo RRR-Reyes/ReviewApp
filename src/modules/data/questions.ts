@@ -835,7 +835,7 @@ public class BinSearch {
         "Amortized analysis shows that expensive O(n) resizes occur rarely (only at powers of 2). The cost is spread over O(n) cheap O(1) insertions, yielding O(1) average per operation.",
       code: "",
       answer: "B",
-      image: "amortizedanalysis",
+      image: "amortizedanalysi.png",
     },
   ],
   "Chapter 5: Recursion": [
@@ -1135,7 +1135,7 @@ public class BinSearch {
         "Corporate charts can have many children per node, while binary trees are limited to two.",
       code: "",
       answer: "B",
-      image: binaryTree,
+      image: "binaryTree.png",
     },
     {
       id: 35,
@@ -1147,7 +1147,7 @@ public class BinSearch {
       explanation: "In-order: Left, Root, Right.",
       code: "",
       answer: "C",
-      image: inorderTraversal,
+      image: "inorderTraversal.png",
     },
     {
       id: 36,
@@ -1159,7 +1159,7 @@ public class BinSearch {
       explanation: "Nodes at level k = 2^k. 2^5 = 32.",
       code: "",
       answer: "B",
-      image: maximumNodes,
+      image: "maximumNodes.png",
     },
     {
       id: 37,
@@ -1341,7 +1341,7 @@ public class BinSearch {
         "In a min-heap array implementation, the root (minimum element) is always at index 0. The array is not fully sorted (only heap-ordered), and dynamic resizing may still be needed if the heap grows beyond current capacity.",
       code: "",
       answer: "B",
-      image: heap,
+      image: "heap.png",
     },
     {
       id: 76,
@@ -1354,7 +1354,7 @@ public class BinSearch {
         "In array-based heap representation with root at index 0, the left child is at index 2i+1 and the right child is at 2i+2. This arithmetic mapping eliminates the need for explicit pointers.",
       code: "",
       answer: "C",
-      image: heap,
+      image: "heap.png",
     },
     {
       id: 78,
@@ -1372,7 +1372,7 @@ public class BinSearch {
         "Heaps must satisfy two properties: (1) the heap-order property (parent ≤ children for a min-heap), and (2) the structural property (complete binary tree with all levels filled left-to-right). Tree A violates heap-order: node (38,D) has a left child (35,C) where 35 < 38, meaning the parent is larger than its child. Tree C violates the structural property: it is not a complete binary tree because node (55,T) has no children while nodes to its right (like 44,B) do have children, creating a gap in the last level. Trees B and D are valid min-heaps that satisfy both properties.",
       code: "",
       answer: "B",
-      image: heapmcq,
+      image: "heapmcq.png",
     },
     {
       id: 81,
@@ -1385,7 +1385,7 @@ public class BinSearch {
         "After removing the minimum element from a min-heap, the heap is restructured through down-heap bubbling (percolate down) to maintain the heap-order property. The new root will be the next smallest element in the heap.",
       code: "",
       answer: "C",
-      image: priorityheap,
+      image: "priorityheap.png",
     },
     {
       id: 84,
@@ -1610,7 +1610,7 @@ public class BinSearch {
         "Using only the last four digits of SSN as a hash function maps all SSNs with the same last four digits to the same bucket, causing frequent collisions. The implementation must handle collisions using chaining or open addressing.",
       code: "",
       answer: "B",
-      image: hash,
+      image: "hash.png",
     },
     {
       id: 66,
@@ -2017,7 +2017,7 @@ public class TestSongMap {
       explanation: "Worst case is the depth of the tree, which is 6.",
       code: "",
       answer: "C",
-      image: bstMaxTraversal,
+      image: "bstMaxTraversal.png",
     },
     {
       id: 55,
@@ -2034,7 +2034,7 @@ public class TestSongMap {
       explanation: "Following BST logic, 77 falls to the left of 80.",
       code: "",
       answer: "A",
-      image: bstMaxTraversal,
+      image: "bstMaxTraversal.png",
     },
     {
       id: 56,
@@ -2718,7 +2718,7 @@ public static void insertionSort(char[] data) {
         "In Huffman encoding, each character is assigned a binary code based on its path from the root (left = 0, right = 1). Locate each character (b, a, r) in the tree and trace the path from root to leaf to derive each code, then concatenate them.",
       code: "",
       answer: "B",
-      image: huffman,
+      image: "huffman.png",
     },
     {
       id: 148,
@@ -2754,7 +2754,7 @@ public static void insertionSort(char[] data) {
         "Tries physically map prefix relationships. Searching for a prefix of length L takes O(L) time — same whether the dictionary has 100 or 100 million words. Hash tables cannot efficiently enumerate keys with a given prefix.",
       code: "",
       answer: "B",
-      image: "Trie",
+      image: "Trie.png",
     },
     {
       id: 164,
@@ -2772,7 +2772,7 @@ public static void insertionSort(char[] data) {
         "Trace the tree: 110=c, 0=a, 10=b. Result: 'cab'. Each code is prefix-free, so decoding is unambiguous.",
       code: "",
       answer: "B",
-      image: "huffmancab",
+      image: "huffmancab.png",
     },
     {
       id: 152,
@@ -2785,7 +2785,7 @@ public static void insertionSort(char[] data) {
         "A complete balanced binary tree minimizes the height to O(log n), giving the best worst-case search time. Degenerate trees degrade to O(n) for search, equivalent to a linked list.",
       code: "",
       answer: "A",
-      image: nodesupport,
+      image: "nodesupport.png",
     },
     {
       id: 153,
@@ -2798,7 +2798,7 @@ public static void insertionSort(char[] data) {
         "When inserting into a Red-Black Tree, the new node is initially colored red. If a double-red violation occurs, resolve it by recoloring or restructuring based on the uncle's color, then verify all Red-Black properties are maintained.",
       code: "",
       answer: "C",
-      image: rbt,
+      image: "rbt.png",
     },
     {
       id: 159,
@@ -2816,7 +2816,7 @@ public static void insertionSort(char[] data) {
         "For Case 3 (two children), find the predecessor — the maximum key in the left subtree. Move it to the deleted node's position, then promote its subtree. This maintains BST ordering.",
       code: "",
       answer: "B",
-      image: "BSTDeleteCase3",
+      image: "BSTDeleteCase3.png",
     },
     {
       id: 163,
@@ -2854,7 +2854,7 @@ public static void insertionSort(char[] data) {
         "Dijkstra's algorithm always extracts the vertex with the smallest distance label from the priority queue. This vertex is then considered 'finalized' — its shortest path from the source is now known.",
       code: "",
       answer: "B",
-      image: "DijkstraActivity",
+      image: "DijkstraActivity.png",
     },
     {
       id: 156,
@@ -2872,7 +2872,7 @@ public static void insertionSort(char[] data) {
         "The relaxation step updates D[v] only if the path through u is shorter: D[u] + w(u,v) < D[v]. This is the core comparison that finds shorter paths.",
       code: "",
       answer: "B",
-      image: "DijkstraExample",
+      image: "DijkstraExample.png",
     },
     {
       id: 157,
@@ -2890,7 +2890,7 @@ public static void insertionSort(char[] data) {
         "When t is finalized, the algorithm checks if D[t] + w(t,v) < D[v]. Since v already had a shorter path (through u), no update occurred. The existing path s→u→v was shorter than any path through t.",
       code: "",
       answer: "B",
-      image: "DijkstraExample",
+      image: "DijkstraExample.png",
     },
     {
       id: 158,
@@ -2908,7 +2908,7 @@ public static void insertionSort(char[] data) {
         "An adjacency map uses O(E) space (2,000 entries) and provides O(1) average-case lookup via hashing. An adjacency matrix wastes space with 250,000 cells for only 2,000 edges.",
       code: "",
       answer: "C",
-      image: "graphexample",
+      image: "graphexample.png",
     },
   ],
   "Chapter 15: Memory Management and B-Trees": [
