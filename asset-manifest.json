@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ReviewApp/static/css/main.4bc3a5b3.css",
-    "main.js": "/ReviewApp/static/js/main.d2a7c0d4.js",
+    "main.js": "/ReviewApp/static/js/main.aae8e041.js",
     "static/media/nunito-latin-ext-400-normal.woff": "/ReviewApp/static/media/nunito-latin-ext-400-normal.9e3f8b3c52665eca6dd4.woff",
     "static/media/nunito-latin-400-normal.woff": "/ReviewApp/static/media/nunito-latin-400-normal.b342b7eec6f6c9d25026.woff",
     "static/media/nunito-latin-400-normal.woff2": "/ReviewApp/static/media/nunito-latin-400-normal.1426bd429b6b372852b9.woff2",
@@ -14,10 +14,10 @@
     "static/media/nunito-vietnamese-400-normal.woff2": "/ReviewApp/static/media/nunito-vietnamese-400-normal.213c0aece007d7a8fbc0.woff2",
     "index.html": "/ReviewApp/index.html",
     "main.4bc3a5b3.css.map": "/ReviewApp/static/css/main.4bc3a5b3.css.map",
-    "main.d2a7c0d4.js.map": "/ReviewApp/static/js/main.d2a7c0d4.js.map"
+    "main.aae8e041.js.map": "/ReviewApp/static/js/main.aae8e041.js.map"
   },
   "entrypoints": [
     "static/css/main.4bc3a5b3.css",
-    "static/js/main.d2a7c0d4.js"
+    "static/js/main.aae8e041.js"
   ]
 }
